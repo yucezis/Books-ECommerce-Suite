@@ -1,67 +1,49 @@
-# Books E-Commerce | .NET Web API & MVC Admin & Flutter App
+# Books E-Commerce Suite | Full-Stack Ecosystem
 
-This project is a comprehensive Full Stack E-Commerce solution developed using modern software architectures and principles. The system consists of three main layers: a central Web API for data management, an ASP.NET Core MVC Admin Panel for administrative operations, and a Flutter Mobile Application for the end-user experience.
+This repository serves as the central documentation and architectural overview for the **BookNest** graduation project. The project is a comprehensive Full Stack E-Commerce solution developed using modern software architectures and principles. 
+
+To prioritize sustainability, scalability, and independent deployment, the system has been modularized into three independent repositories.
+
+### 🔗 Core System Repositories
+* **[Backend API Repository](https://github.com/yucezis/books-API):** .NET 9 Web API & Entity Framework Core (Central Data Provider)
+* **[Admin Panel Repository](https://github.com/yucezis/books-admin-panel-mvc):** ASP.NET Core MVC Dashboard (Administrative Operations)
+* **[Mobile App Repository](https://github.com/yucezis/books-mobile-app):** Flutter Mobile Application (Customer Shopping Interface)
+
+---
 
 ## Architectural Structure
 
-The project is designed with a modular structure, prioritizing sustainability and scalability.
-
-- **Backend:** .NET Core Web API (Central Data Provider)
-- **Frontend (Web):** ASP.NET Core MVC (Admin Interface)
-- **Frontend (Mobile):** Flutter (Customer Shopping Interface)
-- **Database:** MS SQL Server
+The project is designed with an N-Layer architecture, decoupling the frontend interfaces from the core business logic. 
 
 <p align="center">
-  <img  src="https://github.com/user-attachments/assets/6d0cbe9f-9c10-4f85-892e-f0704208c531" alt="Resim Açıklaması" width="600">
+  <img src="https://github.com/user-attachments/assets/6d0cbe9f-9c10-4f85-892e-f0704208c531" alt="BookNest Architecture Diagram" width="600">
   <br>
   <small>This diagram illustrates the overall system architecture of the project, including the API, Admin Panel, Mobile App, and Database layers.</small>
 </p>
 
 ---
 
-## Project Status & Features
+## Project Highlights & Features
 
-The management panel, backend infrastructure, and mobile application have been fully developed and are ready for deployment.
+The management panel, backend infrastructure, and mobile application have been fully developed to simulate a real-world, production-ready environment.
 
-### Admin Panel & Backend
--  **API Architecture:** RESTful services and database integration with Entity Framework Core.
--  **Category & Product Management:** Full-scope CRUD (Create, Read, Update, Delete) operations.
+### 🧠 Advanced Backend & AI Integration
+-  **Google Gemini AI:** Integrated AI-powered chat to provide real-time customer support and personalized book recommendations.
+-  **Robust API Architecture:** RESTful services and database integration leveraging Entity Framework Core (Code First).
+-  **Security & Session:** Secure Admin login, role management, and Session handling.
+
+### 💻 Admin Panel (Web)
+-  **Category & Product Management:** Full-scope CRUD operations with stock tracking and Active/Passive status control.
 -  **Customer Support Module:** Real-time messaging interface for Admins to reply to customer inquiries.
--  **Advanced Product Features:** Stock tracking, Active/Passive status control, and Featured products.
--  **Customer Management:** Customer listing with data privacy masking (Hiding Name, Surname, Phone).
--  **Sales History:** Detailed viewing of customer-specific past orders.
--  **Security & Session:** Admin login and secure Session management.
--  **Dashboard:** Summary data and statistical charts.
--  **Review Management:** System to view and moderate user comments, photos, and ratings.
+-  **Customer Management:** Data privacy masking (Hiding Name, Surname, Phone) and detailed sales history.
+-  **Dashboard:** Summary data, statistical charts, and review moderation system.
 
-### Mobile App
-**Core Features**
--  **Home Page:** Banner areas, Category list, and Featured products showcase.
--  **API Integration:** Fetching product and category data from the live database.
--  **Sorting Algorithm:** Dynamic listing of "Best Sellers" based on sales quantity.
--  **Authentication:** User registration (Register) and login (Login) processes.
--  **E-Invoice Generation:** Automatic creation of digital invoices (PDF) for completed orders.
+### 📱 Mobile App (Cross-Platform)
+-  **Shopping & Checkout:** Dynamic cart operations, multiple address management, and conditional shipping fee calculation.
+-  **Authentication & Security:** User registration, login, mandatory email verification, and simulated OTP/SMS verification.
+-  **Order Tracking:** Visual interface to track delivery status and automatic E-Invoice (PDF) generation.
+-  **User Experience:** Dynamic "Best Sellers" sorting, advanced filtering, wishlists, and a system to rate/review books with photo uploads.
 
-**Shopping & Checkout**
--  **Cart Operations:** Functions to add, update, and remove products from the cart.
--  **Address Management:** Saving and managing multiple shipping addresses.
--  **Purchasing Process:** Payment screen interface and order creation service.
--  **Order History:** Displaying past orders and their status details.
--  **Shipment Tracking:** Visual interface to track the delivery status (Preparing, Shipped, Delivered).
--  **Conditional Shipping Fee:** Automatically adds a shipping fee for orders below 500 TL.
-
-**User Experience & Interaction**
--  **Email Verification:** Mandatory validation step via email for new registrations and profile updates.
--  **Secure Profile Updates:** Mandatory email verification for updating passwords and personal information.
--  **Account Deletion:** Users can permanently close their accounts, secured via email confirmation.
--  **Live Support:** Direct chat interface for users to communicate with store admins.
--  **AI-Powered Chat:** Integrated **Google Gemini** to provide real-time support and personalized book recommendations.
--  **OTP / SMS Verification Simulation:** Simulating code verification for secure registration.
--  **Wishlist:** Ability to favorite products for quick access.
--  **Advanced Search:** Filtering products by price, author, or publisher.
--  **Profile Page:** Displaying and editing user information via API.
--  **Reviews & Ratings:** Users can rate books (1-5 stars) and write comments, and upload photos.
-      
 ---
 
 ## Tech Stack
@@ -70,6 +52,7 @@ The management panel, backend infrastructure, and mobile application have been f
 - .NET 9
 - Entity Framework Core (Code First)
 - LINQ
+- SQL Server
 - Swagger UI
 
 ### Admin Panel (Web)
@@ -81,44 +64,25 @@ The management panel, backend infrastructure, and mobile application have been f
 ### Mobile (Cross-Platform)
 - Flutter & Dart
 - Http Package
-  
+- 
 ---
 
 ## Installation & Setup
 
-Follow the steps below to run the project on your local machine.
+Since BookNest utilizes a micro-repo architecture, each layer has its own setup instructions and dependencies. To run the project on your local machine, please follow the documentation in the respective repositories:
 
-### 1. Backend (API) Settings
-Update the `Connection String` in `appsettings.json` and create the database via Package Manager Console:
+1. **Backend API:** Please visit the **[Backend Repository]** for database configuration (`appsettings.json`), EF Core migrations (`Update-Database`), and running the local server.
+2. **Admin Panel:** Check the **[Admin Repository]** to configure the API connection and run the MVC web app.
+3. **Mobile App:** Visit the **[Mobile Repository]** to update the `baseUrl` with your local IPv4 address before running the Flutter application on an emulator or physical device.
 
-```bash
-Update-Database
-```
-*Note the HTTP port from `launchSettings.json` (e.g., 5126).*
-
-### 2. Network Settings (⚠️ Important)
-To allow the Mobile App (Emulator/Device) to communicate with the Local API:
-1.  Find your IPv4 address (`cmd` -> `ipconfig`).
-2.  Ensure both devices are on the same Wi-Fi network.
-3.  Allow the port through Firewall if necessary.
-
-### 3. Mobile (Flutter) Settings
-Update the `baseUrl` in your service file (e.g., `lib/services/api_service.dart`):
-
-```dart
-String getBaseUrl() {
-  // Replace with your IPv4 address
-  return "http://192.168.1.XX:5126/api";
-}
-```
 ---
 
 ## Developer
 
 - **Name:** Zişan Yüce  
 - **Role:** Computer Engineering Student 
-- **Goal:** This project was developed as a **Graduation Project** for the Computer Engineering department. It aims to demonstrate advanced Full Stack development capabilities by building a scalable, real-world e-commerce ecosystem.The project showcases the integration of a robust .NET Core backend with both Web (MVC) and Mobile (Flutter) interfaces, applying best practices in **N-Layer Architecture**,**RESTful API design**, and **Cross-Platform development**.
+- **Goal:** Developed as a comprehensive **Graduation Project**, this suite demonstrates advanced Full Stack development capabilities. It highlights a strong focus on building scalable, real-world e-commerce ecosystems, integrating a robust **.NET Core backend** with Web (MVC) and Mobile (Flutter) interfaces, and applying best practices in N-Layer Architecture and RESTful API design.
 
 ---
 
-⭐ **If you like this project, don't forget to give it a star!**
+⭐ **If you like this project, don't forget to give the individual repositories a star!**
