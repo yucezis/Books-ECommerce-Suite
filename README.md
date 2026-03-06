@@ -12,7 +12,7 @@ The project is designed with a modular structure, prioritizing sustainability an
 - **Database:** MS SQL Server
 
 <p align="center">
-  <img src="https://r.resimlink.com/ZmKE9-O4SMC.png" alt="Resim Açıklaması" width="600">
+  <img  src="https://github.com/user-attachments/assets/6d0cbe9f-9c10-4f85-892e-f0704208c531" alt="Resim Açıklaması" width="600">
   <br>
   <small>This diagram illustrates the overall system architecture of the project, including the API, Admin Panel, Mobile App, and Database layers.</small>
 </p>
@@ -81,20 +81,7 @@ The management panel, backend infrastructure, and mobile application have been f
 ### Mobile (Cross-Platform)
 - Flutter & Dart
 - Http Package
-- State Management: Provider 
-
----
-
-## Screenshots
-
-| Admin Panel - Products | Admin Panel - Customers |
-| :---: | :---: |
-| <img src="https://r.resimlink.com/8Rxg6.png" width="400"> | <img src="https://r.resimlink.com/IAExP.png" width="400"> |
-
-| Mobile - Home Page | Mobile - Profile Screen | Mobile - AI Screen |
-| :---: | :---: | :---: |
-| <img src="https://r.resimlink.com/TJE1lIszk.jpg" width="200"> | <img src="https://r.resimlink.com/JUL-oO.jpg" width="200"> | <img src="https://r.resimlink.com/pQHEqgRdJ.png" width="200"> |
-
+  
 ---
 
 ## Installation & Setup
