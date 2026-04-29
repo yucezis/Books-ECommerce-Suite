@@ -11,6 +11,11 @@ To prioritize sustainability, scalability, and independent deployment, the syste
 
 ---
 
+## 📄 Project Thesis
+The comprehensive academic report and detailed thesis documentation for this project are available below:   [Graduation Thesis (PDF)](./Graduation_Thesis.pdf)
+
+---
+
 ## Architectural Structure
 
 The project is designed with an N-Layer architecture, decoupling the frontend interfaces from the core business logic. 
